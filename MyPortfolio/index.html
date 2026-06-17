@@ -3,50 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кудашкин Тимур — Портфолио</title>
-    <meta name="description" content="Персональный сайт-портфолио Кудашкина Тимура. Рассказ о себе, моих увлечениях, любимых книгах и контакты для связи.">
+    <title>Моё Портфолио</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Кудашкин Тимур</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Обо мне</a></li>
-                <li><a href="#hobby">Мое хобби</a></li>
-                <li><a href="#contacts">Контакты</a></li>
-            </ul>
+    <header class="main-header">
+        <nav class="nav-menu">
+            <a href="#about" class="nav-link">Обо мне</a>
+            <a href="#hobbies" class="nav-link">Хобби</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p>Привет! Меня зовут Тимур, и я начинающий веб-разработчик. На этой странице я хочу немного рассказать о себе, своих увлечениях и целях. Я изучаю современные технологии и стремлюсь создавать удобные и красивые сайты.</p>
-            <p>В свободное время я люблю разбираться в коде, читать техническую литературу и решать логические задачи. Этот сайт — мой первый шаг в структурировании информации с помощью семантического HTML.</p>
-            <img src="/Users/a1111/104_105_Introductory_Practice/MyPortfolio/photo_2026-06-16 15.55.05.jpeg" alt="Фотография Кудашкина Тимура, автора портфолио">
+    <main class="content-container">
+        
+        <h1 class="page-title">Добро пожаловать в моё портфолио!</h1>
+
+        <section id="about" class="about-section">
+            <h2 class="section-title">Обо мне</h2>
+            <img src="photo.jpg" alt="Моя фотография" class="profile-pic">
+            <p class="about-text">
+                Привет! Меня зовут Тимур Кудашкин, я студент 1-го курса. Я изучаю основы веб-разработки, 
+                работу с системой контроля версий Git и базовые алгоритмы. Стремлюсь писать 
+                чистый код и создавать удобные интерфейсы.
+            </p>
         </section>
 
-        <section id="hobby">
-            <h2>Мое хобби</h2>
-            <article>
-                <h3>Фотография на пленочную камеру</h3>
-                <p>Мое главное увлечение — аналоговая фотография. Мне нравится сам процесс: выбор пленки, ручная настройка экспозиции и магия ожидания готовых кадров. Это хобби учит меня терпению и вниманию к деталям, что очень помогает и в программировании.</p>
-            </article>
+        <section id="hobbies" class="hobby-section">
+            <h2 class="section-title">Мои увлечения</h2>
+            <div class="hobby-card">
+                <h3>Спорт и тренажерный зал</h3>
+                <p>Регулярно тренируюсь в зале, изучаю биомеханику движений и правильное выполнение силовых упражнений.</p>
+            </div>
+            <div class="hobby-card">
+                <h3>Программирование</h3>
+                <p>В свободное время изучаю синтаксис низкоуровневых языков, разметку HTML и работу с ветками в репозиториях.</p>
+            </div>
         </section>
+
     </main>
 
-    <aside>
-        <h2>Любимые фильмы</h2>
-        <ol>
-            <li>Интерстеллар</li>
-            <li>Начало</li>
-            <li>Матрица</li>
-        </ol>
-    </aside>
-
-    <footer id="contacts">
-        <p>&copy; 2026 Тимур Кудашкин. Ссылка на мой <a href="https://github.com/richyusuf" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
+    <footer class="main-footer">
+        <p class="footer-text">© 2026 Разработано в рамках ознакомительной практики</p>
     </footer>
 
 </body>
