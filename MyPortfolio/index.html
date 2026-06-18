@@ -14,43 +14,77 @@
 <body>
 
     <header class="main-header">
-        <nav class="nav-menu">
-            <a href="#about" class="nav-link">Обо мне</a>
-            <a href="#hobbies" class="nav-link">Хобби</a>
-            <a href="#contacts" class="nav-link">Контакты</a>
-        </nav>
+        <div class="header-container">
+            <div class="site-logo">StudySpace</div>
+            <nav class="nav-menu">
+                <a href="#about" class="nav-link">Обо мне</a>
+                <a href="#projects" class="nav-link">Проекты</a>
+                <a href="#hobbies" class="nav-link">Хобби</a>
+            </nav>
+        </div>
     </header>
 
-    <main class="content-container">
+    <main class="main-grid-layout">
         
-        <h1 class="page-title">Добро пожаловать в моё портфолио!</h1>
-
-        <section id="about" class="about-section">
-            <h2 class="section-title">Обо мне</h2>
-            <img src="photo.jpg" alt="Моя фотография" class="profile-pic">
-            <p class="about-text">
-                Привет! Меня зовут Тимур Кудашкин, я студент 1-го курса. Я изучаю основы веб-разработки, 
-                работу с системой контроля версий Git и базовые алгоритмы. Стремлюсь писать 
-                чистый код и создавать удобные интерфейсы.
+        <aside class="sidebar-section" id="about">
+            <img src="/Users/a1111/104_105_Introductory_Practice/MyPortfolio/photo_2026-06-16 15.55.05.jpeg" alt="Моя фотография" class="profile-pic">
+            <h2 class="sidebar-title">Тимур Кудашкин</h2>
+            <p class="sidebar-text">
+                Изучаю основы веб-разработки, алгоритмы и низкоуровневое программирование. 
+                Практикую работу с Git и учусь создавать сетки сайтов.
             </p>
-        </section>
+        </aside>
 
-        <section id="hobbies" class="hobby-section">
-            <h2 class="section-title">Мои увлечения</h2>
-            <div class="hobby-card">
-                <h3>Спорт и тренажерный зал</h3>
-                <p>Регулярно тренируюсь в зале, изучаю биомеханику движений и правильное выполнение силовых упражнений.</p>
-            </div>
-            <div class="hobby-card">
-                <h3>Программирование</h3>
-                <p>В свободное время изучаю синтаксис низкоуровневых языков, разметку HTML и работу с ветками в репозиториях.</p>
-            </div>
-        </section>
+        <div class="main-content">
+            
+            <h1 class="page-title">Добро пожаловать в моё портфолио!</h1>
+
+            <section id="projects" class="projects-section">
+                <h2 class="section-title">Мои проекты</h2>
+                
+                <div class="projects-grid">
+                    
+                    <div class="project-card">
+                        <div class="card-icon"></div>
+                        <h3 class="card-title">Сайт-визитка</h3>
+                        <p class="card-text">Разработка индивидуального макета портфолио с применением блочной модели HTML/CSS.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-icon"></div>
+                        <h3 class="card-title">Битовый калькулятор</h3>
+                        <p class="card-text">Конвертер чисел на C++ без использования указателей, построенный на логике формул и бинарных сдвигов.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-icon"></div>
+                        <h3 class="card-title">Анализ данных в NumPy</h3>
+                        <p class="card-text">Обработка и вычисление статистических показателей финансовых рынков.</p>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-icon"></div>
+                        <h3 class="card-title">Работа с математическими моделями</h3>
+                        <p class="card-text">Обучение математических моделей на основе свободных данных yfinance котировок SPY500</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="hobbies" class="hobby-section">
+                <h2 class="section-title">Мои увлечения</h2>
+                <div class="hobby-box">
+                    <h3>Спорт и тренажерный зал</h3>
+                    <p>Увлекаюсь силовыми тренировками, уделяю внимание биомеханике движений.</p>
+                </div>
+            </section>
+
+        </div>
 
     </main>
 
     <footer class="main-footer">
-        <p class="footer-text">© 2026 Разработано в рамках ознакомительной практики</p>
+        <p class="footer-text">© 2026 Тимур Кудашкин</p>
     </footer>
 
 </body>
