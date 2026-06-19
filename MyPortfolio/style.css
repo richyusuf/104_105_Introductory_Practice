@@ -16,9 +16,9 @@ body {
     margin: 0px auto;
     padding: 0px 20px;
     
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
 }
 
 .site-logo {
@@ -29,7 +29,7 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 25px;
+    gap: 25px; 
 }
 
 .nav-link {
@@ -47,9 +47,10 @@ body {
     color: #0f172a;
     font-size: 32px;
     font-weight: 700;
-    margin-top: 0px;
+    margin-top: 0px; 
     margin-bottom: 25px;
 }
+
 
 .section-title {
     font-size: 22px;
@@ -62,12 +63,12 @@ body {
 
 .main-grid-layout {
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 40px auto; 
     padding: 0px 20px;
     
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    gap: 30px;
+    display: grid; 
+    grid-template-columns: 1fr 3fr; 
+    gap: 30px; 
 }
 
 .sidebar-section {
@@ -77,18 +78,19 @@ body {
     border: 1px solid #e2e8f0;
     text-align: center;
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
 }
 
 .profile-pic {
-    width: 180px;
-    height: 180px;
+    max-width: 180px; 
+    height: auto;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border: 4px solid hsl(198, 80%, 52%);
-    border-radius: 50%;
+    border: 4px solid #38bdf8; 
+    border-radius: 50%; 
 }
 
 .sidebar-title {
@@ -106,13 +108,13 @@ body {
 .main-content {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 35px; 
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
 }
 
 .project-card {
@@ -121,9 +123,9 @@ body {
     border-radius: 10px;
     border: 1px solid #e2e8f0;
     
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: flex; 
+    flex-direction: column; 
+    gap: 12px; 
 }
 
 .card-icon {
@@ -171,4 +173,36 @@ body {
     color: #94a3b8;
     font-size: 13px;
     margin: 0px;
+}
+
+@media (max-width: 768px) {
+    
+    .header-container {
+        flex-direction: column;
+        gap: 15px;              
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .main-grid-layout {
+        margin: 20px auto;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .page-title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 }
