@@ -130,3 +130,58 @@ portfolioData.projects.forEach(project => {
 
 console.log("\nОблако тегов (Уникальные технологии)");
 console.log(uniqueTechnologies);
+
+
+const btnOpen = document.querySelector('.btn-open');
+const btnClose = document.querySelector('.btn-close');
+const modalWindow = document.querySelector('.modal');
+
+const contactForm = document.querySelector('.contact-form');
+const messageInput = document.querySelector('.message-input');
+const charCounter = document.querySelector('.char-counter');
+
+if (btnOpen && btnClose && modalWindow) {
+    
+    btnOpen.addEventListener('click', () => {
+        modalWindow.classList.add('active');
+    });
+
+    btnClose.addEventListener('click', () => {
+        modalWindow.classList.remove('active');
+    });
+
+    modalWindow.addEventListener('click', (event) => {
+        if (event.target === modalWindow) {
+            modalWindow.classList.remove('active');
+        }
+    });
+}
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        console.log("Форма перехвачена, перезагрузки не было!");
+        
+        contactForm.reset();
+        if (charCounter) charCounter.textContent = "0/100";
+        if (modalWindow) modalWindow.classList.remove('active');
+        
+        alert("Сообщение успешно «отправлено»! Проверьте консоль браузера.");
+    });
+}
+
+if (messageInput && charCounter) {
+    messageInput.addEventListener('input', (event) => {
+        
+        const currentLength = event.target.value.length;
+        
+        charCounter.textContent = `${currentLength}/100`;
+        
+        if (currentLength >= 90) {
+            charCounter.style.color = '#f97316';
+        } else {
+            charCounter.style.color = '#64748b';
+        }
+    });
+}
