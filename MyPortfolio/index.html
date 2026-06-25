@@ -20,6 +20,7 @@
                 <a href="#about" class="nav-link">Обо мне</a>
                 <a href="#projects" class="nav-link">Проекты</a>
                 <a href="#hobbies" class="nav-link">Хобби</a>
+                <button class="btn-open">Написать мне</button>
             </nav>
         </div>
     </header>
@@ -43,32 +44,7 @@
                 <h2 class="section-title">Мои проекты</h2>
                 
                 <div class="projects-grid">
-                    
-                    <div class="project-card">
-                        <div class="card-icon"></div>
-                        <h3 class="card-title">Сайт-визитка</h3>
-                        <p class="card-text">Разработка индивидуального макета портфолио с применением блочной модели HTML/CSS.</p>
                     </div>
-
-                    <div class="project-card">
-                        <div class="card-icon"></div>
-                        <h3 class="card-title">Битовый калькулятор</h3>
-                        <p class="card-text">Конвертер чисел на C++ без использования указателей, построенный на логике формул и бинарных сдвигов.</p>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-icon"></div>
-                        <h3 class="card-title">Анализ данных в NumPy</h3>
-                        <p class="card-text">Обработка и вычисление статистических показателей финансовых рынков.</p>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="card-icon"></div>
-                        <h3 class="card-title">Работа с математическими моделями</h3>
-                        <p class="card-text">Обучение математических моделей на основе свободных данных yfinance котировок SPY500</p>
-                    </div>
-
-                </div>
             </section>
 
             <section id="hobbies" class="hobby-section">
@@ -80,32 +56,32 @@
             </section>
 
             <section class="contact-section">
-    <h2 class="section-title">Связаться со мной</h2>
-    <form action="#" method="POST" class="contact-form">
-        
-        <div class="form-group">
-            <label for="user-name" class="form-label">Ваше имя</label>
-            <input type="text" id="user-name" class="form-input" placeholder="Введите ваше имя" required>
-        </div>
+                <h2 class="section-title">Предложить идею</h2>
+                <form action="#" method="POST" class="contact-form">
+                    
+                    <div class="form-group">
+                        <label for="user-name" class="form-label">Ваше имя</label>
+                        <input type="text" id="user-name" class="form-input" placeholder="Введите ваше имя" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="user-email" class="form-label">Электронная почта</label>
-            <input type="email" id="user-email" class="form-input" placeholder="username@example.com" required>
-        </div>
+                    <div class="form-group">
+                        <label for="user-email" class="form-label">Электронная почта</label>
+                        <input type="email" id="user-email" class="form-input" placeholder="username@example.com" required>
+                    </div>
 
-        <div class="form-group">
-            <label for="contact-date" class="form-label">Желаемая дата контакта</label>
-            <input type="date" id="contact-date" class="form-input">
-        </div>
+                    <div class="form-group">
+                        <label for="contact-date" class="form-label">Желаемая дата контакта</label>
+                        <input type="date" id="contact-date" class="form-input">
+                    </div>
 
-        <div class="form-checkbox-group">
-            <input type="checkbox" id="data-agree" class="form-checkbox" required>
-            <label for="data-agree" class="checkbox-label">Согласен на обработку персональных данных</label>
-        </div>
+                    <div class="form-checkbox-group">
+                        <input type="checkbox" id="data-agree" class="form-checkbox" required>
+                        <label for="data-agree" class="checkbox-label">Согласен на обработку персональных данных</label>
+                    </div>
 
-        <button type="submit" class="submit-btn">Отправить сообщение</button>
-    </form>
-</section>
+                    <button type="submit" class="submit-btn">Отправить сообщение</button>
+                </form>
+            </section>
 
         </div>
 
@@ -114,6 +90,31 @@
     <footer class="main-footer">
         <p class="footer-text">© 2026 Тимур Кудашкин</p>
     </footer>
+
+    <div class="modal">
+        <div class="modal-content">
+            <button class="btn-close">&times;</button>
+            
+            <h3 class="modal-title">Обратная связь</h3>
+            
+            <form class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="modal-email" class="form-label">Ваш Email</label>
+                    <input type="email" id="modal-email" class="form-input" required placeholder="name@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-msg" class="form-label">Ваше сообщение</label>
+                    <textarea id="modal-msg" class="message-input" maxlength="100" placeholder="Введите текст..."></textarea>
+                    <p class="char-counter">0/100</p>
+                </div>
+                
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 
 </body>
 </html>
